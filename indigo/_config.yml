@@ -1,0 +1,199 @@
+# hexo-theme-indigo
+# https://github.com/yscoder/hexo-theme-indigo
+
+# 添加新菜单项遵循以下规则
+# menu:
+#  link:               fontawesome图标，省略前缀，本主题前缀为 icon-，必须
+#    text: About       菜单显示的文字，如果省略即默认与图标一致，首字母会转大写
+#    url: /about       链接，绝对或相对路径，必须。
+#    target: _blank    是否跳出，省略则在当前页面打开
+menu:
+  folder-open:
+    text: 博客主页
+    url: /
+  archives:
+    text: 文章归档
+    url: /archives
+  th-list:
+    text: 文章分类
+    url: /categories
+#  github:
+#    text: Github
+#    url: https://github.com/TianZonglin
+#    target: _blank
+#   link:
+#     text: 我的音乐
+#     url: https://music.163.com/#/user/home?id=99148651
+#     target: _blank 
+  cloud-download:
+    text: 资源分享
+    url: /other/page_share.html
+  book:
+    text: 建站日志
+    url: /other/page_log.html
+  comments:
+    text: 留言评论
+    url: /other/page_comment.html
+  leaf:
+    text: 我的订阅
+    url: /feedek/feedread.html
+    
+# 你的头像url
+avatar: /img/logo.jpg
+# avatar link
+avatar_link: /other/page_about.html
+# 头像背景图
+brand: /img/brand.jpg
+# favicon
+favicon: /favicon.ico
+
+# email
+email: tianzonglin@qq.com
+
+# 设置 Android L Chrome 浏览器状态栏颜色
+color: '#3F51B5'
+
+# 页面标题
+tags_title: 书签
+archives_title: 归档
+categories_title: 分类
+
+# 文章截断
+excerpt_render: false
+excerpt_length: 200
+excerpt_link: 阅读全文...
+mathjax: false
+archive_yearly: true
+
+
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+
+
+# 是否显示文章最后更新时间
+show_last_updated: false
+
+# 是否开启分享
+share: true
+
+# 是否开启打赏，关闭 reward: false
+reward:
+  title: 谢谢支持！
+  wechat: /img/wechat.jpg     #微信，关闭设为 false
+  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+
+# 是否开启搜索
+search: true
+
+# 是否大屏幕下文章页隐藏导航
+hideMenu: true
+
+# 是否开启toc
+# toc: false
+toc:
+  list_number: true  # 是否显示数字排序
+
+# 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
+postMessage: <b>欢迎在下方</b><span style="color:#ff4081"><b>评论留言</b></span><b>，转载请</b><span style="color:#ff4081"><b>注明出处</b></span><b>：</b><br>本文链接：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
+
+# 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1267979247
+cnzz: 1267979247
+
+# 百度统计，如要开启，改为你的 key
+baidu_tongji: c2e1413258e6c65224a7efe4e6d6a956
+baidu_push: true
+
+# 腾讯分析，如要开启，输入站点id
+tajs: false
+
+# google
+google_analytics: UA-109269848-1
+google_site_verification: pE8C2OlBY5U3l34MLahqdfACkBWEnE94yNfQADO3HvA
+
+# less
+less:
+  compress: true
+  paths:
+    - source/css/style.less
+
+# 以下评论插件开启一个即可
+# 是否开启 disqus
+disqus_shortname: false
+
+ 
+
+
+# 是否开启友言评论, 填写友言用户id :whereareyou-site
+uyan_uid: false
+# 是否使用 gitment，https://github.com/imsun/gitment
+# gitment: false
+
+# gitment: 
+#   owner: TianZonglin
+#   repo: TianZonglin.github.ioo
+#   client_id: c2b6c057343c51d91e63
+#   client_secret: f3c16313813d46302e40af6765dcdd87a7393c1a
+
+  
+valine: 
+  notify: true
+  verify: true
+  appId: WbLE88qfAcz4hSI5GsQFRlzW-gzGzoHsz
+  appKey: ycqjmtEfUxuxD3IY97oRkrdO
+  avatar: retro
+  placeholder: 请在此处写下你想说的话~
+  guest_info: nick,mail,link
+  pageSize: 10
+  
+  
+  
+# 规范网址
+# 让搜索引擎重定向你的不同域名、不同子域、同域不同目录的站点到你期望的路径
+# https://support.google.com/webmasters/answer/139066
+# 假设配置为 canonical: http://imys.net，那么从搜索引擎中 www.imys.net 进入会重定向到 imys.net
+canonical: https://www.whereareyou.site
+
+# 版权起始年份
+since_year: 2015
+
+# 用户页面中作者相关的描述性文字，如不需要设为 false
+about: 本博客为个人博客，非商业用途，内容多为原创，转载会特别注明，如有侵权，请<a href="tianzonglin@qq.com" value="">邮件</a>告知。<br><span style="display:block;width:100px;height:30px;float:left;line-height:50px;"></span>
+
+# “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
+visit_counter:
+  site_uv: 站点总访客数：
+  site_pv: 站点总访问量：
+
+# 动态定义title
+title_change:
+  normal: ☆ TZLoop\'s Blog ☆
+  leave: ★ TZLoop\'s Blog ★
+
+# 设置为 true 发布后将使用 unpkg cdn
+cdn: true
+
+# 设置为 true 将使用 lightbox render 图片
+lightbox: true
+
+# icp备案号  ICP_license: 京ICP备1234556号-1
+ICP_license: false
+
+#搜索引擎
+sitemap: 
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+  
+tagcloud: false
+#标签云
+#tag_cloud:
+#  textFont: Trebuchet MS, Helvetica
+#  textColour: \#333
+#  textHeight: 25
+#  outlineColour: \#E2E1D1
+
+

@@ -1,0 +1,179 @@
+﻿---
+layout: page      # 必须
+title: 我的订阅 # 必须，页面名称
+description: <br>关注新鲜事（每次展开均刷新订阅）
+comments: false     # 禁用评论，可选，默认开启
+reward: false      # 禁用打赏，可选，默认开启
+about: false
+---
+
+
+<link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
+<style>
+    body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;line-height: 24px !important;}
+
+    ul{width: 100% !important;padding-left: 10px;line-height: 24px !important;}
+	.open{
+		font-size:16px;
+		font-weight:400;
+		color:#f44336;
+	}
+	.t-title{
+		font-size:16px;
+		font-weight:600;
+		color:#3f51b5;
+	}
+ 
+.page-content{
+	border-bottom:0px !important;
+	border-bottom-width:0px !important;
+	}
+	
+a{
+	text-decoration:none;
+}
+
+</style>
+ 
+
+ 
+<div class="card">
+	<div id="contents"></div>
+	<br>
+</div>
+ 
+{%raw%} 
+<section class="comments" id="comments"  style="margin-top:30px;padding:1px 30px 1px 30px;background-color:rgba(255,255,255,1);box-shadow: 0px 0px 5px #bbbbbb;border-radius: 5px;border-left-width: 10px;margin-left: 0px;margin-right: 0px;">
+ 
+ 
+ 
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+   
+    <script type="text/javascript">
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: true,
+            verify: true,
+            appId: "WbLE88qfAcz4hSI5GsQFRlzW-gzGzoHsz",
+            appKey: "ycqjmtEfUxuxD3IY97oRkrdO",
+            avatar: "retro",
+            placeholder: "请在这里输入你想说的话~",
+            guest_info: GUEST_INFO,
+            pageSize: "15"
+        })
+		console.log("Valine done!")
+    </script>
+  
+</section>
+
+<br/>
+
+ 
+
+        
+<div class="card page-about-me flex-row" style="margin-top:20px;">
+	<a href="/other/page_about.html" class="avatar waves-effect waves-circle waves-light"><img src="/img/logo.jpg"></a>
+	<div class="content flex-col">
+		<p><strong>TZLoop</strong></p>
+		<p><em>交流 / 分享 / 提升 /</em></p>
+		<p>本博客为个人博客，非商业用途，内容多为原创，转载会特别注明，如有侵权，请<a href="tianzonglin@qq.com" value="">邮件</a>告知。<a href="https://www.whereareyou.site/other/page_my.html"> </a><br><span style="display:block;width:100px;height:30px;float:left;line-height:50px;"></span></p>
+	</div>
+
+            
+	<div class="page-share-wrap">
+		<div class="page-share" id="pageShare">
+			<ul class="reset share-icons">
+			  <li>
+				<a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.whereareyou.site/other/page_comment.html&title=《留言评论中心》 — TZLoop's Blog&pic=https://www.whereareyou.site/img/logo.jpg" data-title="微博">
+				  <i class="icon icon-weibo"></i>
+				</a>
+			  </li>
+			  <li>
+				<a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+				  <i class="icon icon-weixin"></i>
+				</a>
+			  </li>
+			  <li>
+				<a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.whereareyou.site/other/page_comment.html&title=《留言评论中心》 — TZLoop's Blog&source=" data-title=" QQ">
+				  <i class="icon icon-qq"></i>
+				</a>
+			  </li>
+			  <li>
+				<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.whereareyou.site/other/page_comment.html" data-title=" Facebook">
+				  <i class="icon icon-facebook"></i>
+				</a>
+			  </li>
+			  <li>
+				<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《留言评论中心》 — TZLoop's Blog&url=https://www.whereareyou.site/other/page_comment.html&via=https://www.whereareyou.site" data-title=" Twitter">
+				  <i class="icon icon-twitter"></i>
+				</a>
+			  </li>
+			  <li>
+				<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.whereareyou.site/other/page_comment.html" data-title=" Google+">
+				  <i class="icon icon-google-plus"></i>
+				</a>
+			  </li>
+			</ul>
+		</div>
+		<a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+			<i class="icon icon-share-alt icon-lg"></i>
+		</a>
+	</div>
+
+
+
+</div>
+
+
+
+
+{%endraw%}
+ 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+<script type="text/javascript" src="js/feedek.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){ 
+	 
+		var json = '[{"title":"可视化分析小组",			"url":"http://vis.pku.edu.cn/blog/feed/"},'+
+					'{"title":"月光博客/热点分析",				"url":"http://feed.williamlong.info/"}]';
+					
+		var htm = "";
+		var data = JSON.parse(json);
+		$.each(data,function(index,item){
+			htm += '<span class="t-title">'+item.title+'</span>&emsp;<a id="'+index+'"+ class="open">展开</a><div id="Rss'+index+'"></div>' ;
+		});
+		htm += '<div style="clear: both"></div>';
+		$("#contents").html(htm);
+ 
+		
+		$(document).off("click", ".open").on("click", ".open", function () {
+		
+			var id = $(this)[0].id; 
+			
+			if($(this).text()=="收起"){
+				 
+				$('#Rss'+id).html("");
+				$(this).text("展开");
+			}else{
+				$(this).text("收起");
+				$('#Rss'+id).FeedEk({
+					FeedUrl: data[id].url,
+					MaxCount: 5
+				});	
+			}
+		});
+		
+
+		document.getElementById(data.length - 1).click();  
+ 
+		
+    });
+
+</script>
