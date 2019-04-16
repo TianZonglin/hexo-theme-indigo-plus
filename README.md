@@ -3,6 +3,8 @@ hexo-theme-indigo-plus
 
 [Hexo-theme-indigo]主题的扩展，基于 Hexo 3.0+ 制作。 
 基于 `indigo` 主题进行的顶层扩展。
+本项目一是可以给使用indigo主题的用户提供一些扩展的idea，其次，尤为重要的是，在readme中包括了部分indigo主题文件对应现实功能的描述，这部分可以更好的指导爱好者按自己的需要球盖indigo主题。
+注：本项目并非Hexo主题，只是附加功能和文档描述，基本不包括对原主题的入侵式改动（样式除外）
 
 [原作地址](https://github.com/yscoder/hexo-theme-indigo)
 [原作示例](http://imys.net/)
