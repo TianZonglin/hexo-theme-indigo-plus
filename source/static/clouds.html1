@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+ 
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>中枢</title>
+    <meta name="description" content="cloud valley" />
+    <meta name="keywords" content="nas, dsm">
+    <meta property="og:title" content="">
+ 
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.css" rel="stylesheet">
+	
+	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+	<script src="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/js/bootstrap.js"></script>
+	
+	<style>
+		a{
+			margin-top: 10px; margin-right: 5px;
+		}
+		h1, .h1 {
+			font-size: 30px;
+		}
+		h3, .h3 {
+			font-size: 20px;
+		}
+		th{
+			padding-left: 2px !important;
+		}
+		td{
+			padding-left: 2px !important;
+		}
+		 
+	</style>
+	<script>
+		
+		var color,font="white";
+		var now = new Date(),hour = now.getHours();
+		
+		if (hour<9&&hour>6){color = "#FFFFFF";font = "#000000";}
+		else if (hour < 12){color = "#DCDCDC";font = "#000000";}
+		else if (hour < 14){color = "#C0C0C0";font = "#000000";}
+		else if (hour < 17){color = "#A9A9A9";font = "#000000";}
+		else if (hour < 19){color = "#F5F5F5";font = "#FFFFFF";}
+		else if (hour < 22){color = "#808080";font = "#FFFFFF";}
+		else if (hour < 6) {color = "#F5F5F5";font = "#FFFFFF";}
+		else               {color = "#000000";font = "#FFFFFF";}
+	
+
+		
+		$.ping = function(option) 
+		{
+			var ping, requestTime, responseTime ;
+			var getUrl = function(url){    //保证url带http://
+				var strReg="^((https|http)?://){1}"
+				var re=new RegExp(strReg); 
+				return re.test(url)?url:"http://"+url;
+			}
+			$.ajax({
+				url: getUrl(option.url)+'/'+ (new Date()).getTime() + '.html',  //设置一个空的ajax请求
+				type: 'GET',
+				dataType: 'html',
+				timeout: 1000,
+				beforeSend : function() 
+				{
+					if(option.beforePing) option.beforePing();
+					requestTime = new Date().getTime();
+				},
+				complete : function() 
+				{
+					responseTime = new Date().getTime();
+					ping = Math.abs(requestTime - responseTime);
+					if(option.afterPing) option.afterPing(ping);
+				}
+			});
+		 
+			if(option.interval && option.interval > 0)
+			{
+				var interval = option.interval * 1000;
+				setTimeout(function(){$.ping(option)}, interval);
+		//        option.interval = 0;        // 阻止多重循环
+		//        setInterval(function(){$.ping(option)}, interval);
+			}
+		};
+		
+		var jsonstr = [
+			{addr:"133:80",   trans:"5080", app:"photo",status:"failed"},
+			{addr:"133:5070", trans:"5070", app:"index",status:"failed"},
+			{addr:"133:5000", trans:"5000", app:"web",status:"failed"},
+			{addr:"133:9010", trans:"9010", app:"kod",status:"failed"},
+			{addr:"133:32400",trans:"32400",app:"plex",status:"failed"}
+		];
+		
+		$(document).ready(function(){ 
+			 
+			//修改body元素的背景颜色属性
+			$("body").css("background-color","white");	
+			//$("body").css("font-color","");
+			//$("small").css("color",font);
+		
+			jsonstr.forEach(function(d,i){
+				$.ping({
+					url : "asus.myds.me:"+d.addr.split(":")[1], 
+					beforePing : function(){$('#msg').html('')},
+					afterPing : function(ping){
+						var htm;
+						if(ping % 1 === 0 && ping < 800){
+							htm = "<tr><td>"+d.addr+"</td><td>"+d.trans+"</td><td>"+d.app+"</td><td style='color:green;'>"+ping+" ms</td></tr>";
+						}else{
+							htm = "<tr><td>"+d.addr+"</td><td>"+d.trans+"</td><td>"+d.app+"</td><td style='color:red;'>failed</td></tr>";
+						}
+						$("#tab").append(htm);
+					}, 
+					interval : 10000
+				});
+				
+				
+			});
+			
+		});
+	</script>
+</head>
+<body>
+ <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column" >
+		
+			<div class="page-header">
+				<h1>
+					<b><small style="padding-left: 0px;">Tzloop's</small></b><br>
+					<b>PRIVATE CLOUDS</b>
+				</h1>
+			</div>
+			<h3>
+				Synology NAS
+			</h3> 
+			
+				<a style="background-color:#0086E5;color:#ffffff;border:1px solid #1270B2;text-shadow: 0px 0px 2px #ffffff" href="http://asus.myds.me:5000"  class="btn btn-default" target="_blank">DSM</a> 
+				<a style="background-color:#2c2922;color:#e5a00d;border:1px solid #252420;text-shadow: 0px 0px 2px #e5a00d" href="http://asus.myds.me:32400" class="btn btn-default" target="_blank">PLEX</a>
+				<a style="background-color:#00c0fe;color:#ffffff;border:1px solid #0199ca;text-shadow: 0px 0px 2px #ffffff" href="http://asus.myds.me:5080/photo"  class="btn btn-default" target="_blank">DS PHOTO</a>
+				<a style="background-color:#a9a9a9;color:#ffffff;border:1px solid #808080;text-shadow: 0px 0px 2px #ffffff" href="http://asus.myds.me:5070"  class="btn btn-default" target="_blank">INDEX</a>
+				<a style="background-color:#246cff;color:#ffffff;border:1px solid #1251d4;text-shadow: 0px 0px 2px #ffffff" href="http://asus.myds.me:9010"  class="btn btn-default" target="_blank">KOD EXPLORER</a>
+				<a href="http://asus.myds.me:x"  class="btn btn-default" target="_blank" disabled>RR SHARE</a>
+				<a href="http://asus.myds.me:x"  class="btn btn-default" target="_blank" disabled>WEB SSH</a>
+				<a href="http://asus.myds.me:5022"  class="btn btn-default" target="_blank" disabled>SFTP</a>
+			
+
+			<h3>
+				Router Manager
+			</h3> 
+			
+				<a style="background-color:#1d74b2;color:#fefeff;border:1px solid #155c8f;text-shadow: 0px 0px 2px #fefeff" href="http://asus.myds.me:5580"  class="btn btn-default" target="_blank" disabled>IKUAI</a>
+				<a style="background-color:#4d5758;color:#93d2d9;border:1px solid #303a3b;text-shadow: 0px 0px 2px #93d2d9" href="http://asus.myds.me:5590"  class="btn btn-default" target="_blank">R7000</a>
+				 
+
+			<h3>
+				ESXi Virtual Machine
+			</h3> 
+			
+				<a style="background-color:#e5e5e5;color:#686b6d;border:1px solid #bdbdbd;text-shadow: 0px 0px 2px #686b6d" href="https://asus.myds.me:5570/ui/#/login"  class="btn btn-default" target="_blank">ESXI</a>
+				<a style="background-color:#fff1c8;color:#963;   border:1px solid #ffdc76;text-shadow: 0px 0px 2px #963   " href="http://asus.myds.me:8081"  class="btn btn-default" target="_blank">TOMCAT</a>
+				<a href="http://asus.myds.me:13389" class="btn btn-default" target="_blank" disabled>SERVER 2016</a>
+				<a href="http://asus.myds.me:x"  class="btn btn-default" target="_blank" disabled>UBUNTU 1804</a>
+				<a href="http://asus.myds.me:x"  class="btn btn-default" target="_blank" disabled>CENTOS 6.3</a>
+				 
+
+			<h3>
+				Personal Links
+			</h3> 
+		  	
+				<a style="background-color:#566cea;color:#ffffff;border:1px solid #3f51b5;text-shadow: 0px 0px 2px #ffffff" href="https://www.zonelyn.com"  class="btn btn-default" target="_blank">BLOG</a>
+				<a style="background-color:#f0f0f0;color:#4a4a4a;border:1px solid #ccc   ;text-shadow: 0px 0px 2px #686b6d" href="https://docs.google.com/document/d/e/2PACX-1vT3hHQ2WLxgtfT80-C40vekvoYcYmd-kRHaTkFyRma5VE35AIH6PFKyYTGdXRmAzhiNmFy4-Ly1K_-_/pub"  class="btn btn-default" target="_blank">RESUME</a>
+				<a style="background-color:#ffc746;color:#fc75a9;border:1px solid #e7a50c;text-shadow: 0px 0px 2px #fc75a9" href="https://喵帕斯.com/user"  class="btn btn-default" target="_blank">MIAOPS</a> 
+				 
+
+			<br><br>
+			<h3>
+				Status Reports
+			</h3> 
+			<table class="table">
+				<thead>
+					<tr>
+						<th>addr</th>
+						<th>trans</th>
+						<th>app</th>
+						<th>status</th>
+			 
+					</tr>
+				</thead>
+				<tbody id="tab">
+				 
+				</tbody>
+			</table>
+			
+			
+			Copyright © 2019 <a href="https://www.zonelyn.com">TZLOOP</a><br> 
+			Contact <a href="#">zonglin.tian@outlook.com</a><br> <br> 
+		</div>
+	</div>
+</div>
+ 
+</body>
+
+</html>

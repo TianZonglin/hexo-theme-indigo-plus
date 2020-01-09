@@ -30,13 +30,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/IMG_20171007_002520.png)
+![](http://asus.myds.me:6543/image/paper/IMG_20171007_002520.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/IMG_20171007_002621.png)
+![](http://asus.myds.me:6543/image/paper/IMG_20171007_002621.png)
 
 }
 
@@ -46,13 +46,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/IMG_20171007_002950.png)
+![](http://asus.myds.me:6543/image/paper/IMG_20171007_002950.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/IMG_20171009_010643.png)
+![](http://asus.myds.me:6543/image/paper/IMG_20171009_010643.png)
 
 }
 
@@ -62,13 +62,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306822353_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306822353_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306828031_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306828031_pic.png)
 
 }
 
@@ -78,13 +78,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306832853_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306832853_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306846596_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306846596_pic.png)
 
 }
 
@@ -94,13 +94,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306852480_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306852480_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306859283_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306859283_pic.png)
 
 }
 
@@ -110,13 +110,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306869363_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306869363_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306869364_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306869364_pic.png)
 
 }
 
@@ -126,13 +126,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306877424_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306877424_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310272760_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310272760_pic.png)
 
 }
 
@@ -142,13 +142,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310277319_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310277319_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310283369_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310283369_pic.png)
 
 }
 
@@ -158,13 +158,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310286320_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310286320_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310297307_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310297307_pic.png)
 
 }
 
@@ -174,13 +174,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310302148_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310302148_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310309000_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310309000_pic.png)
 
 }
 
@@ -190,13 +190,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310342911_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310342911_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310353136_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310353136_pic.png)
 
 }
 
@@ -206,13 +206,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310365175_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310365175_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310428249_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310428249_pic.png)
 
 }
 
@@ -222,13 +222,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310433500_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310433500_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310446545_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310446545_pic.png)
 
 }
 
@@ -238,13 +238,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310453098_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310453098_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310463842_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310463842_pic.png)
 
 }
 
@@ -254,13 +254,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310517084_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310517084_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310532672_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310532672_pic.png)
 
 }
 
@@ -270,13 +270,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310565602_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310565602_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310643801_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310643801_pic.png)
 
 }
 
@@ -286,13 +286,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310653427_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310653427_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310666439_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310666439_pic.png)
 
 }
 
@@ -302,13 +302,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310688265_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310688265_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507310701616_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507310701616_pic.png)
 
 }
 
@@ -318,13 +318,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507386315926_pic.jpeg)
+![](http://asus.myds.me:6543/image/paper/jike_1507386315926_pic.jpeg)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507388738123_pic.jpeg)
+![](http://asus.myds.me:6543/image/paper/jike_1507388738123_pic.jpeg)
 
 }
 
@@ -334,13 +334,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507388749155_pic.jpeg)
+![](http://asus.myds.me:6543/image/paper/jike_1507388749155_pic.jpeg)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508070910465_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508070910465_pic.png)
 
 }
 
@@ -350,13 +350,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508070963483_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508070963483_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508071010496_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508071010496_pic.png)
 
 }
 
@@ -366,13 +366,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508071539140_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508071539140_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508072161607_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508072161607_pic.png)
 
 }
 
@@ -382,13 +382,13 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508072189512_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508072189512_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508072588223_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508072588223_pic.png)
 
 }
 
@@ -398,152 +398,20 @@ about: false
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1508072612651_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1508072612651_pic.png)
 
 }
 
 @card{
 
-![](http://ozmhkse3b.bkt.clouddn.com/image/paper/jike_1507306869363_pic.png)
+![](http://asus.myds.me:6543/image/paper/jike_1507306869363_pic.png)
 
 }
 
 }
 
 
-
-
-
-<br>
-<div class="card page-about-me flex-row" style="margin-top:20px;">
-	<a href="/other/page_about.html" class="avatar waves-effect waves-circle waves-light"><img src="/img/logo.jpg"></a>
-	<div class="content flex-col">
-		<p><strong>TZLoop</strong></p>
-		<p><em>交流 / 分享 / 提升 /</em></p>
-		<p>本博客为个人博客，非商业用途，内容多为原创，转载会特别注明，如有侵权，请<a href="tianzonglin@qq.com" value="">邮件</a>告知。<a href="https://www.whereareyou.site/other/page_my.html"> </a><br><span style="display:block;width:100px;height:30px;float:left;line-height:50px;"></span></p>
-	</div>
-</div>
 
  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 

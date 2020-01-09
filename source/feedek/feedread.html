@@ -1,6 +1,6 @@
 ﻿---
 layout: page      # 必须
-title: 我的订阅 # 必须，页面名称
+title: 我的订阅（加载较慢） # 必须，页面名称
 description: <br>关注新鲜事（每次展开均刷新订阅）
 comments: false     # 禁用评论，可选，默认开启
 reward: false      # 禁用打赏，可选，默认开启
@@ -33,6 +33,47 @@ a{
 	text-decoration:none;
 }
 
+.ln{
+	width:100%;/*设置盒子的宽高，可以根据作为背景的图片宽高来进行设置*/
+	height:100%;
+ 
+    background-size: 200px 200px;
+    background-color: #3f51b5;;
+    background-image: -webkit-linear-gradient(-135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -ms-linear-gradient(-135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(-135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(-135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	background-attachment: fixed;
+	border-radius: 5px;
+	
+	text-align:center;
+	font-color:white;
+	
+    padding-bottom: 25px;
+
+}
+
+.ln > a{
+	color: #ffffff !important;
+	font-size:25px;
+
+}
+
+.column-3 .card{
+    padding: 0px !important;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.58) !important;
+	border-radius: 6px;
+}
+ 
+@media screen and (max-width: 750px) {
+	.ln > a{
+		color: #ffffff !important;
+		font-size:20px;
+
+	}
+}
+
 </style>
  
 
@@ -42,47 +83,64 @@ a{
 	<br>
 </div>
  
-{%raw%} 
-<section class="comments" id="comments"  style="margin-top:30px;padding:1px 30px 1px 30px;background-color:rgba(255,255,255,1);box-shadow: 0px 0px 5px #bbbbbb;border-radius: 5px;border-left-width: 10px;margin-left: 0px;margin-right: 0px;">
- 
- 
- 
-    <div class="comments vcomment" id="comments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
-   
-    <script type="text/javascript">
-        var GUEST_INFO = ['nick','mail','link'];
-        var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
-          return GUEST_INFO.indexOf(item) > -1
-        });
-        new Valine({
-            el: '#comments',
-            notify: true,
-            verify: true,
-            appId: "WbLE88qfAcz4hSI5GsQFRlzW-gzGzoHsz",
-            appKey: "ycqjmtEfUxuxD3IY97oRkrdO",
-            avatar: "retro",
-            placeholder: "请在这里输入你想说的话~",
-            guest_info: GUEST_INFO,
-            pageSize: "15"
-        })
-		console.log("Valine done!")
-    </script>
-  
-</section>
+</div>
 
 <br/>
 
+<style>
+.post-content h2 {
+    font-size: 28px !important;
+}
+</style>
+
+<!--
+<div class="card">
+<h2 id="精-彩-博-客"><a href="#精-彩-博-客" class="headerlink" title="精  彩  博  客"></a>★    精  彩  博  客    ★</h2></div>
+<div class="column-3">
+<div class="card">
+<div class="ln">
+	<a href="https://yanhaijing.com/" >颜海镜</a>
+</div>
+</div>
+<div class="card">
+<div class="ln">
+	<a href="https://blog.codingnow.com/" >云风’s Blog</a>
+</div>
+</div>
+<div class="card">
+<div class="ln">
+	<a href="http://www.ayqy.net/blog/" >黯羽轻扬</a>
+</div>
+</div>
+</div>
+<div class="column-3">
+<div class="card">
+<div class="ln">
+	<a href="https://3gods.com/" >3GODS</a>
+</div>
+</div>
+<div class="card">
+<div class="ln">
+	<a href="https://justjavac.com/" >迷渡</a>
+</div>
+</div>
+<div class="card">
+<div class="ln">
+	<a href="http://book.douban.com/people/4139160/annotation/" >大刀笔记</a>
+</div>
+</div>
+</div>
+ -->
  
+{%raw%} 
 
         
-<div class="card page-about-me flex-row" style="margin-top:20px;">
+<div class="card page-about-me flex-row" style="margin-top:20px;margin-left: -16px;margin-right: -16px;">
 	<a href="/other/page_about.html" class="avatar waves-effect waves-circle waves-light"><img src="/img/logo.jpg"></a>
 	<div class="content flex-col">
 		<p><strong>TZLoop</strong></p>
-		<p><em>交流 / 分享 / 提升 /</em></p>
-		<p>本博客为个人博客，非商业用途，内容多为原创，转载会特别注明，如有侵权，请<a href="tianzonglin@qq.com" value="">邮件</a>告知。<a href="https://www.whereareyou.site/other/page_my.html"> </a><br><span style="display:block;width:100px;height:30px;float:left;line-height:50px;"></span></p>
+		<p>保持怀疑，独立思考</p>
+		<p>本博客为个人博客，非商业用途，内容多为原创，转载会特别注明，如有侵权，请<a href="tianzonglin@qq.com" value="">邮件</a>告知。<a href="https://www.zonelyn.com/other/page_my.html"> </a><br><span style="display:block;width:100px;height:30px;float:left;line-height:50px;"></span></p>
 	</div>
 
             
@@ -90,7 +148,7 @@ a{
 		<div class="page-share" id="pageShare">
 			<ul class="reset share-icons">
 			  <li>
-				<a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.whereareyou.site/other/page_comment.html&title=《留言评论中心》 — TZLoop's Blog&pic=https://www.whereareyou.site/img/logo.jpg" data-title="微博">
+				<a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.zonelyn.com/other/page_comment.html&title=《留言评论中心》 — TZLoop's Blog&pic=https://www.zonelyn.com/img/logo.jpg" data-title="微博">
 				  <i class="icon icon-weibo"></i>
 				</a>
 			  </li>
@@ -100,22 +158,22 @@ a{
 				</a>
 			  </li>
 			  <li>
-				<a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.whereareyou.site/other/page_comment.html&title=《留言评论中心》 — TZLoop's Blog&source=" data-title=" QQ">
+				<a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.zonelyn.com/other/page_comment.html&title=《留言评论中心》 — TZLoop's Blog&source=" data-title=" QQ">
 				  <i class="icon icon-qq"></i>
 				</a>
 			  </li>
 			  <li>
-				<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.whereareyou.site/other/page_comment.html" data-title=" Facebook">
+				<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.zonelyn.com/other/page_comment.html" data-title=" Facebook">
 				  <i class="icon icon-facebook"></i>
 				</a>
 			  </li>
 			  <li>
-				<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《留言评论中心》 — TZLoop's Blog&url=https://www.whereareyou.site/other/page_comment.html&via=https://www.whereareyou.site" data-title=" Twitter">
+				<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《留言评论中心》 — TZLoop's Blog&url=https://www.zonelyn.com/other/page_comment.html&via=https://www.zonelyn.com" data-title=" Twitter">
 				  <i class="icon icon-twitter"></i>
 				</a>
 			  </li>
 			  <li>
-				<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.whereareyou.site/other/page_comment.html" data-title=" Google+">
+				<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.zonelyn.com/other/page_comment.html" data-title=" Google+">
 				  <i class="icon icon-google-plus"></i>
 				</a>
 			  </li>
@@ -130,7 +188,15 @@ a{
 
 </div>
 
+<section class="comments" id="comments"  style="margin-left: -16px;margin-right: -16px;margin-top:50px;padding:30px 30px 30px 30px;background-color:rgba(255,255,255,1);box-shadow: 0px 0px 5px #bbbbbb;border-radius: 3px;border-left-width: 10px;">
+ 
+ 
+<span class="ppt"><b>如需评论请移步<a href="../../other/page_comment.html">&nbsp;评论中心&nbsp;</a>统一留言回复。</b></span>    
 
+  
+</section>
+
+<br/>
 
 
 {%endraw%}
@@ -142,7 +208,11 @@ a{
     $(document).ready(function(){ 
 	 
 		var json = '[{"title":"可视化分析小组",			"url":"http://vis.pku.edu.cn/blog/feed/"},'+
-					'{"title":"月光博客/热点分析",				"url":"http://feed.williamlong.info/"}]';
+					'{"title":"谢益辉的博客",			"url":"https://yihui.name/cn/index.xml"},'+
+					'{"title":"鑫空间-鑫生活",			"url":"http://www.zhangxinxu.com/wordpress/feed/"},'+
+					'{"title":"CoolShell",				"url":"https://coolshell.cn/feed"},'+
+					'{"title":"月光博客/热点时评",				"url":"http://feed.williamlong.info/"},'+
+					'{"title":"云风BLOG",				"url":"https://blog.codingnow.com/atom.xml"}]';
 					
 		var htm = "";
 		var data = JSON.parse(json);

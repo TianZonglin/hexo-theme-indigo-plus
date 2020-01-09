@@ -16,5 +16,5 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 
-Sitemap: http://www.whereareyou.site/sitemap.xml
-Sitemap: http://www.whereareyou.site/baidusitemap.xml
+Sitemap: http://www.zonelyn.com/sitemap.xml
+Sitemap: http://www.zonelyn.com/baidusitemap.xml
