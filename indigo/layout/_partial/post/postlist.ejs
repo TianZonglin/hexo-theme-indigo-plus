@@ -1,0 +1,35 @@
+﻿<!-- 相关文章 -->
+<section class="comments" id="comments"  style="margin-top:30px;padding:1px 30px 1px 9px;background-color:rgba(255,255,255,1);box-shadow: 0px 0px 20px #bbbbbb;border-radius: 5px;border-left-width: 10px;">
+
+  <p style="margin-top:25px;">
+	<b><span style="font-size:20px;font-weight:900px;color:#3f51b5;">「 相关文章 」</span></b>
+  </p>
+  <hr style="height:1px;border:none;border-top:1px dashed #3f51b5;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;margin-left: 12px;margin-right: 3px;" />
+	<ul style="margin-bottom:35px;list-style:none;padding-left: 11px;">
+	  <%
+		//页面全部内容
+		var arr = getCategoryList(page, 3);
+		//每次生成文章都会执行
+		for( var i in arr) {
+		  var article = arr[i];
+	  %>
+ 
+	  <li>
+		<div style="">
+		  <b><a class="post-title-link" href="<%- url_for(article.path) %>"><%- article.title%></a></b>
+		   
+		  <p style="margin-top:5px;line-height:22px;font-size:14px;color:#616167;">
+		  <%- truncate(strip_html(article.excerpt || article.content ), {length: 100}) %>
+		  </p>
+		  
+		</div>
+ 
+	  </li>
+	  <%
+		}
+	  %>
+	</ul>
+
+	
+</section>
+	

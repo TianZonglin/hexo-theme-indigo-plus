@@ -1,0 +1,18 @@
+<% if (theme.gitment){ %>
+<section class="comments" id="comments"  style="margin-top:40px;padding:1px 15px 1px 10px;background-color:rgba(255,255,255,0.7);box-shadow: 0px 0px 20px #bbbbbb;border-radius: 5px;">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: '<%- theme.gitment.owner %>',
+            repo: '<%- theme.gitment.repo %>',
+            oauth: {
+                client_id: '<%- theme.gitment.client_id %>',
+                client_secret: '<%- theme.gitment.client_secret %>',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+<% } %>

@@ -4,6 +4,9 @@ db.json
 *.log
 node_modules/
 public/
+source/_post/
+source/other/
+source/torrent/content.json
 .deploy*/
 .git*/
 bak.yml
