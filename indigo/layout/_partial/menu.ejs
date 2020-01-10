@@ -1,0 +1,340 @@
+<aside id="menu" <% if((is_post() || page.layout === 'page') && theme.hideMenu){ %>class="hide"<% } %> >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(<%- url_for(theme.brand) %>)">
+      <div class="brand">
+        <a href="<%- url_for(theme.avatar_link) %>" class="avatar waves-effect waves-circle waves-light">
+          <img src="<%- url_for(theme.avatar) %>" alt="田宗霖的博客中出现的关于Spark、Hadoop、Java、IDEA、Js及html相关内容的图片">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname"><%- config.author %>&nbsp;<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=751d46f1614408b66761a561cbaf19fdf04b393df7403204acd550c9e25f2dde"><img border="0" width="18px" height="17px" src="http://ozmhkse3b.bkt.clouddn.com/image/acger/group.png" alt="我的资料备份" title="我的资料备份"></a></h5>
+          <%- mail_to(theme.email, theme.email, {class: 'mail'}) %>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        <%
+          var menuItem, isActive = function(item) {
+              var pageUrl = url_for(page.path)
+              return item.url === '/' ? pageUrl === url_for(item.url + 'index.html') : _.startsWith(pageUrl, url_for(item.url))
+          };
+          for (var i in theme.menu) {
+            menuItem = theme.menu[i];
+          %>
+            <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
+              <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> >
+                <i class="icon icon-lg icon-<%= i %>"></i>
+                <%=(menuItem.text || _.startCase(i)) %>
+              </a>
+            </li>
+        <% } %>
+<script>
+ 
+
+window.onclick = function(e) {
+    if (e.target.matches('.dropbtn')) {
+        document.getElementById("dropdown").classList.toggle("show");
+    }
+	
+}
+
+ 
+ 
+
+ 
+</script>	
+<style>
+.dropbtn {
+ 
+}
+.dropdown:hover .dropbtn {
+ 
+}
+li.dropdown {
+ 
+}
+.dropdown-content {
+    display: none;
+ 
+}
+.dropdown-content a {
+ 
+}
+ 
+.show {
+	transition: .8s ease-in-out;
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+a.items1:hover {
+	transform: rotate(10deg);
+}
+a.items2:hover {
+	transform: rotate(10deg);
+}
+a.items3:hover {
+	transform: rotate(10deg);
+}
+a.items4:hover {
+	transform: rotate(10deg);
+}
+
+</style>
+            <li class="waves-block waves-effect">
+				<i class="icon icon-lg icon-coffee" style="color:#777"></i>
+				<a class="dropbtn" >友情链接</a>
+					<div class="dropdown-content" id="dropdown">
+						<a href="https://pekeyli.github.io/" class="items1">Σ(⚆൧⚆)&nbsp;Pekey ~</a>
+						<a href="https://boltdoggy.com" class="items3">Σ(⚆൧⚆)&nbsp;Bolt ~</a>
+						<a href="http://yuanxin.me" class="items2">Σ(⚆൧⚆)&nbsp;Yuanxin ~</a>
+						<a href="http://blog.boxmoe.cn" class="items4">Σ(⚆൧⚆)&nbsp;Boxmoe ~</a>
+
+					</div>
+            </li>
+		
+    
+		
+		
+<li >		
+<% if (theme.tagcloud && site.tags.length){ %>
+    <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+    <div class="widget-wrap">
+        <!--<h3 class="widget-title"><%= __('tagcloud') %></h3>-->
+        <div id="myCanvasContainer" class="widget tagcloud" width="120%" style="margin-left:-15px;">
+            <canvas width="200px" height="200px" id="resCanvas" >
+                <%- tagcloud() %>
+            </canvas>
+        </div>
+    </div>
+<% } %>
+</li>
+<div style="display:none;">
+<a href="https://www.imys.net/">[Yusen's Blog]</a>
+<a href="https://blog.codingnow.com/">[云风's Blog]</a>
+<a href="http://www.ayqy.net/blog/">[黯羽轻扬]</a>
+<a href="http://meroa.com/">[Meroa]</a>
+<a href="http://r2s.name/">[Nan Xiao]</a>
+<a href="http://book.douban.com/people/4139160/annotation/">[大刀的笔记]</a>
+<a href="https://mikecoder.github.io/oj-code/tags/Brainteaser/">[MikeCoder]</a>
+<a href="http://yihui.name/cn/">[谢益辉的博客]</a>
+<a href="https://github.com/xufei/blog/issues/6">[Xufei]</a>
+<a href="https://github.com/lifesinger/blog/issues/184">[lifesinger]</a>
+<a href="http://daohang.lusongsong.com/">[lusongsong]</a>
+<a href="http://ioliu.cn">[xCss]</a>
+<a href="http://vis.pku.edu.cn/blog/">[可视化分析小组]</a>
+<a href="https://segmentfault.com/a/1190000004703040">[A]</a>
+<a href="https://www.cnblogs.com/nzbin/p/5860219.html">[B]</a>
+<a href="https://www.cnblogs.com/luozhihao/p/5579786.html">[C]</a>
+<a href="http://cos.name/">[统计之都]</a>
+<a href="http://ifeve.com">[并发编程]</a>
+<a href="http://site.douban.com/182577/room/2177971/">[数据铺子]</a>
+<a href="http://program-think.blogspot.com/">[编程随想]</a>
+<a href="http://cnpameng.com/">[中国爬盟]</a>
+<a href="http://kw.fudan.edu.cn/">[知识工厂]</a>
+</div>
+      </ul>
+
+    </div>
+  </div>
+</aside>
+		<!--
+			<li class="waves-block waves-effect">
+				<i class="icon icon-lg icon-bell" style="color:#777"></i>
+				<a title="" href='javascript:(function go() {
+					function c() {
+						var e = document.createElement("link");
+						e.setAttribute("type", "text/css");
+						e.setAttribute("rel", "stylesheet");
+						e.setAttribute("href", f);
+						e.setAttribute("class", l);
+						document.body.appendChild(e)
+					}
+
+					function h() {
+						var e = document.getElementsByClassName(l);
+						for (var t = 0; t < e.length; t++) {
+							document.body.removeChild(e[t])
+						}
+					}
+
+					function p() {
+						var e = document.createElement("div");
+						e.setAttribute("class", a);
+						document.body.appendChild(e);
+						setTimeout(function() {
+							document.body.removeChild(e)
+						}, 100)
+					}
+
+					function d(e) {
+						return {
+							height : e.offsetHeight,
+							width : e.offsetWidth
+						}
+					}
+
+					function v(i) {
+						var s = d(i);
+						return s.height > e && s.height < n && s.width > t && s.width < r
+					}
+
+					function m(e) {
+						var t = e;
+						var n = 0;
+						while (!!t) {
+							n += t.offsetTop;
+							t = t.offsetParent
+						}
+						return n
+					}
+
+					function g() {
+						var e = document.documentElement;
+						if (!!window.innerWidth) {
+							return window.innerHeight
+						} else if (e && !isNaN(e.clientHeight)) {
+							return e.clientHeight
+						}
+						return 0
+					}
+
+					function y() {
+						if (window.pageYOffset) {
+							return window.pageYOffset
+						}
+						return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+					}
+
+					function E(e) {
+						var t = m(e);
+						return t >= w && t <= b + w
+					}
+	
+	
+					var songs = ["http://ozmhkse3b.bkt.clouddn.com/Funk.mp3","http://ozmhkse3b.bkt.clouddn.com/Seve%20.mp3","http://ozmhkse3b.bkt.clouddn.com/Here.mp3"];
+
+					function x(e) {
+						e.className += " " + s + " " + o
+					}
+
+					function T(e) {
+						e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+					}
+
+					function N() {
+						var e = document.getElementsByClassName(s);
+						var t = new RegExp("\\b" + s + "\\b");
+						for (var n = 0; n < e.length; ) {
+							e[n].className = e[n].className.replace(t, "")
+						}
+					}
+					
+					function S() {
+						var e = document.getElementById("audio_element_id");
+						if (e != null) {
+							var index = parseInt(e.getAttribute("curSongIndex"));
+							if (index > songs.length - 2) {
+								index = 0;
+							} else {
+								index++;
+							}
+							e.setAttribute("curSongIndex", index);
+							N();
+						}
+						e.src = i;
+						e.play()
+					}			
+					
+					function initAudioEle() {
+						var e = document.getElementById("audio_element_id");
+						if (e === null) {
+							 
+							e = document.createElement("audio");
+							e.setAttribute("class", l);
+							e.setAttribute("curSongIndex", 0);
+							e.id = "audio_element_id";
+							e.loop = false;
+							e.bgcolor = 0;
+							e.addEventListener("canplay",
+								function() {
+									setTimeout(function() {
+										x(k)
+									},
+									500);
+									setTimeout(function() {
+										N();
+										p();
+										for (var e = 0; e < O.length; e++) {
+											T(O[e])
+										}
+									},
+									15500)
+								},true);
+							e.addEventListener("ended",function() {
+								N();
+								h();
+								go();
+							},true);
+							e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+							document.body.appendChild(e);
+						}
+					}
+					
+					initAudioEle();
+					var e = 30;
+					var t = 30;
+					var n = 350;
+					var r = 350;
+					var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+					var i = songs[curSongIndex];
+					var s = "mw-harlem_shake_me";
+					var o = "im_first";
+					var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+					var a = "mw-strobe_light";
+					var f = "/plugin-shake/harlem-shake-style.css"; 
+					var l = "mw_added_css";
+					var b = g();
+					var w = y();
+					var C = document.getElementsByTagName("*");
+					var k = null;
+					for (var L = 0; L < C.length; L++) {
+						var A = C[L];
+						if (v(A)) {
+							if (E(A)) {
+								k = A;
+								break
+							}
+						}
+					}
+					if (A === null) {
+						console.warn("Could not find a node of the right size. Please try a different page.");
+						return
+					}
+					c();
+					S();
+					var O = [];
+					for (var L = 0; L < C.length; L++) {
+						var A = C[L];
+						if (v(A)) {
+							O.push(A)
+						}
+					}
+				})()    '>动次打次</a>
+			</li>
+		
+			<li class="waves-block waves-effect">
+				<i class="icon icon-lg icon-comments" style="color:#777"></i>
+				<a href="https://www.whereareyou.site/other/page_comment.html">交流中心</a>
+			</li>
+			<li class="waves-block waves-effect">
+				<i class="icon icon-lg icon-coffee" style="color:#777"></i>
+				<a href="https://www.whereareyou.site/feedek/feedread.html">我的订阅</a>
+			</li>
+		-->	
